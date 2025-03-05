@@ -3,8 +3,24 @@ import { Button } from "@/components/ui/button";
 import { Download, Linkedin, Twitter } from "lucide-react";
 import { Link } from "wouter";
 import TypingEffect from "@/components/TypingEffect";
+import { SOCIAL_LINKS } from "@/lib/constants";
 
 export default function Header() {
+  const handleDownloadCV = () => {
+    // Create a link to download the CV
+    const link = document.createElement('a');
+    link.href = '/Mohamed_Tayel_CV.pdf'; // This should be the path to your CV file
+    link.download = 'Mohamed_Tayel_CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    element?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center bg-background py-20">
       <div className="container px-4">
@@ -32,18 +48,22 @@ export default function Header() {
           </p>
           <div className="flex flex-col items-center gap-4">
             <div className="flex gap-4">
-              <Button variant="default" size="lg">
+              <Button variant="default" size="lg" onClick={handleDownloadCV}>
                 <Download className="mr-2" /> Download CV
               </Button>
-              <Button variant="outline" size="lg">
-                <Linkedin className="mr-2" /> LinkedIn
+              <Button variant="outline" size="lg" asChild>
+                <a href={SOCIAL_LINKS.linkedin} target="_blank" rel="noopener noreferrer">
+                  <Linkedin className="mr-2" /> LinkedIn
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                <Twitter className="mr-2" /> Twitter
+              <Button variant="outline" size="lg" asChild>
+                <a href={SOCIAL_LINKS.twitter} target="_blank" rel="noopener noreferrer">
+                  <Twitter className="mr-2" /> Twitter
+                </a>
               </Button>
             </div>
-            <Button variant="outline" size="lg" asChild>
-              <Link href="#blog">Blog</Link>
+            <Button variant="outline" size="lg" onClick={() => scrollToSection('blog')}>
+              Blog
             </Button>
           </div>
         </motion.div>
