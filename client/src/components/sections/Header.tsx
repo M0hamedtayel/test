@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
-import TypingEffect from "../TypingEffect";
 import { Button } from "@/components/ui/button";
 import { Download, Linkedin, Twitter } from "lucide-react";
+import TypingEffect from "@/components/TypingEffect";
 
 export default function Header() {
   return (

@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import SkillBar from "../SkillBar";
+import SkillBar from "@/components/SkillBar";
 
 export default function Skills() {
   const skills = [

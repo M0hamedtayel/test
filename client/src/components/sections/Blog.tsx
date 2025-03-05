@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import BlogCard from "../BlogCard";
+import BlogCard from "@/components/BlogCard";
 import { useQuery } from "@tanstack/react-query";
 import type { BlogPost } from "@shared/schema";
 
