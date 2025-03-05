@@ -43,9 +43,9 @@ export default function Contact() {
           viewport={{ once: true }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <h2 className="text-3xl font-bold mb-4 font-mono">Get in Touch</h2>
+          <h2 className="text-3xl font-bold mb-4 font-mono">Contact Me</h2>
           <p className="text-lg text-muted-foreground">
-            Have a security concern or interested in working together? Let's talk!
+            Interested in collaborating or have a security concern? Send me a message.
           </p>
         </motion.div>
 

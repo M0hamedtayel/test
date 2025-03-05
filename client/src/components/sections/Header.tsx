@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import TypingEffect from "../TypingEffect";
 import { Button } from "@/components/ui/button";
-import { Download, Github, Linkedin } from "lucide-react";
+import { Download, Github, Twitter } from "lucide-react";
 
 export default function Header() {
   return (
@@ -35,7 +35,7 @@ export default function Header() {
                 <Github className="mr-2" /> GitHub
               </Button>
               <Button variant="outline" size="lg">
-                <Linkedin className="mr-2" /> LinkedIn
+                <Twitter className="mr-2" /> Twitter
               </Button>
             </div>
           </motion.div>
