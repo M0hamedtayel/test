@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import TypingEffect from "../TypingEffect";
 import { Button } from "@/components/ui/button";
-import { Download, Github, Twitter } from "lucide-react";
+import { Download, Linkedin, Twitter } from "lucide-react";
 
 export default function Header() {
   return (
@@ -27,15 +27,20 @@ export default function Header() {
               Dedicated to finding and fixing web security vulnerabilities, 
               ensuring robust protection for web applications.
             </p>
-            <div className="flex gap-4 justify-center">
-              <Button variant="default" size="lg">
-                <Download className="mr-2" /> Download CV
-              </Button>
-              <Button variant="outline" size="lg">
-                <Github className="mr-2" /> GitHub
-              </Button>
-              <Button variant="outline" size="lg">
-                <Twitter className="mr-2" /> Twitter
+            <div className="flex flex-col items-center gap-4">
+              <div className="flex gap-4">
+                <Button variant="default" size="lg">
+                  <Download className="mr-2" /> Download CV
+                </Button>
+                <Button variant="outline" size="lg">
+                  <Linkedin className="mr-2" /> LinkedIn
+                </Button>
+                <Button variant="outline" size="lg">
+                  <Twitter className="mr-2" /> Twitter
+                </Button>
+              </div>
+              <Button variant="outline" size="lg" asChild>
+                <a href="#blog">Blog</a>
               </Button>
             </div>
           </motion.div>
